@@ -2,6 +2,11 @@ from adress import Adress
 
 from mailing import Mailing
 
-mailing = Mailing()
+mailing = Mailing('12345678901234', 100)
+to_adress = Adress('654321', 'Krasnoyarsk', 'Lenina', 1, 2)
+from_adress = Adress('123456', 'Moscow', 'Kirenskogo', 2, 1)
 
-print('Отправление',  mailing.track, 'из', Adress.index[0] + ',', Adress.city[0] + ',', Adress.street[0] + ',', Adress.house[0], '-', Adress.flat[0], 'в', Adress.index[1] + ',', Adress.city[1] + ',', Adress.street[1] + ',', Adress.house[1], '-', Adress.flat[1], '.', 'Стоимость', mailing.cost, 'рублей.')
+mailing.say_track()
+to_adress.say_to_adress()
+from_adress.say_from_adress()
+mailing.say_cost()
